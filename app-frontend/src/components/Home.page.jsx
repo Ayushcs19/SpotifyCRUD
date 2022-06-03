@@ -46,14 +46,10 @@ export default function HomePage() {
                     return <th scope="col">{heading}</th>
                 })
             }  
-            {/* <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th> */}
           </tr>
         </thead>
         <tbody>
-          {artists.map((artist,index) => {
+          {artists.map((artist) => {
               return <tr>
                   <th>artwork</th>
                   <th>{artist.song}</th>
