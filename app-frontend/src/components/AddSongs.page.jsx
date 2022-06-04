@@ -1,14 +1,18 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function AddSongs() {
   return (
     <div>
+      <h2 style={{margin:'17px'}}>Adding a new song</h2>
+     
     <form style={{
         grid:''
     }}>
   <div class="form-group d-flex flex-row" style={{
       gap:'80px'
   }}>
+    
     <label for="songName">Song Name</label>
     <input type="text" class="form-control" style={{
         minWidth:'200px',
@@ -41,13 +45,13 @@ export default function AddSongs() {
         minWidth:'200px',
         maxWidth:'400px',marginLeft:'100px'
     }} id="Artist">
-        <option>Justin Bieber</option>
+        <option>AP Dhillon</option>
       <option>Lewis Capaldi</option>
       <option>Sidhu Moose Wala</option>
       <option>Quavo</option>
       <option>Juice WRLDloc</option>
     </select>
-    <button class="btn btn-primary" style={{marginLeft:'-30px'}}>Add artist</button>
+    <Link to="/addartist" className='btn btn-primary'>Add Artist </Link>
   </div>
   <div class="form-group form-check">
     <input type="button" class="btn btn-primary" id="exampleCheck1" value="cancel" style={{marginLeft:'-23px'}} />
@@ -55,6 +59,7 @@ export default function AddSongs() {
   </div>
   <button type="submit" class="btn btn-primary" style={{marginTop:'5px'}}>Submit</button>
 </form>
+
     </div>
   )
 }

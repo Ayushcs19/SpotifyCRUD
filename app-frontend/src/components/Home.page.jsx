@@ -1,4 +1,6 @@
-import React from "react";
+import { Button } from "bootstrap";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
   const data = {
@@ -11,36 +13,78 @@ export default function HomePage() {
 
     },
     {
-        name:'Justin Bieber',
-        song:'Sorry',
-        date:'5th sept 2022',
+        name:'Atif',
+        song:'Dilbar',
+        date:'9th dec 2022',
         image:'hi',
 
     },
     {
-        name:'Justin Bieber',
-        song:'Sorry',
-        date:'5th sept 2022',
+        name:'Arjit',
+        song:'Tum hi ho',
+        date:'12th april 2019',
         image:'hi',
 
     },
     {
-        name:'Justin Bieber',
-        song:'Sorry',
-        date:'5th sept 2022',
+        name:'Sidhu Moose Wala',
+        song:'Devil',
+        date:'29th Mar 2018',
         image:'hi',
 
     },
+    {
+      name:'Sidhu Moose Wala',
+      song:'Devil',
+      date:'29th Mar 2018',
+      image:'hi',
+
+  },    {
+    name:'Sidhu Moose Wala',
+    song:'Devil',
+    date:'29th Mar 2018',
+    image:'hi',
+
+},    {
+  name:'Sidhu Moose Wala',
+  song:'Devil',
+  date:'29th Mar 2018',
+  image:'hi',
+
+},    {
+  name:'Sidhu Moose Wala',
+  song:'Devil',
+  date:'29th Mar 2018',
+  image:'hi',
+
+},    {
+  name:'Sidhu Moose Wala',
+  song:'Devil',
+  date:'29th Mar 2018',
+  image:'hi',
+
+},    {
+  name:'Sidhu Moose Wala',
+  song:'Devil',
+  date:'29th Mar 2018',
+  image:'hi',
+
+},
     
 ],
   };
+  const {openModal, setOpenMadal} = useState(false);
   const headings = data.headings;
   const artists = data.artists;
   return (
     <div>
-      <table class="table table-dark">
+     <div>
+  <h2 style={{marginLeft:'50px'}}> Top 10 Song</h2>
+      <Link to="/addsongs" className="btn btn-success" style={{float:'right' , marginTop:'-30px'}}> +  Add Songs</Link>
+      <table class="table table-Light" style={{
+}}>
         <thead>
-          <tr>
+          <tr style={{backgroundColor:'black',color:'white'} }>
             {
                 headings.map((heading) => {
                     return <th scope="col">{heading}</th>
@@ -78,6 +122,7 @@ export default function HomePage() {
           </tr> */}
         </tbody>
       </table>
+      </div>
     </div>
   );
 }
