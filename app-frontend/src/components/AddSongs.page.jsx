@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+ 
 
 export default function AddSongs() {
   return (
-    <div>
-      <h2 style={{margin:'17px'}}>Adding a new song</h2>
+    <div  className='logo'>
+      
+      <h2 style={{margin:'20px'}}>Adding a new song</h2>
      
     <form style={{
         grid:''
@@ -51,7 +53,7 @@ export default function AddSongs() {
       <option>Quavo</option>
       <option>Juice WRLDloc</option>
     </select>
-    <Link to="/addartist" className='btn btn-primary'>Add Artist </Link>
+    <Link to="/addartist" className='btn btn-primary' style={{marginLeft:'-25px'}}>Add Artist </Link>
   </div>
   <div class="form-group form-check">
     <input type="button" class="btn btn-primary" id="exampleCheck1" value="cancel" style={{marginLeft:'-23px'}} />
